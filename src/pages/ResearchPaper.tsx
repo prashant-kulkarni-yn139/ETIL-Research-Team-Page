@@ -8,22 +8,22 @@ import { Button } from '@/components/ui/button';
 const papers = [
   {
     id: "neural-networks-segmentation",
-    title: "Advanced Neural Networks for Real-Time Image Segmentation",
-    authors: "Chen, S., Zhang, E., Rodriguez, M.",
-    venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2024)",
+    title: "Two-Stage, Global-Local Approach for Cell Nuclei Segmentation in Histopathology Images",
+    authors: "Amit Shakya, Revat Saharan, Chetan Gupta, Rupesh Kumar, Lalit Sharma, Srivatsava Naidu, Subrahmanyam Murala, Chetan Arora.",
+    venue: "IEEE 8th International Conference on Information and Communication Technology (CICT)",
     year: "2024",
-    abstract: "We present a novel approach to real-time image segmentation using lightweight neural networks that achieve state-of-the-art performance while maintaining computational efficiency. Our method introduces a new architectural design that combines the benefits of transformer attention mechanisms with the computational efficiency of convolutional neural networks. The proposed approach achieves 95.2% accuracy on the COCO dataset while maintaining real-time inference speeds of 30+ FPS on consumer hardware.",
-    arxivLink: "https://arxiv.org/abs/2024.00001",
+    abstract: "Effective management of high-resolution, and spatially wide contextual cues is fundamental to the accurate semantic segmentation. Traditional approaches like multi-resolution feature maps, and skip-connection are effective but require changes in the backbone architecture, restricting utilization of newer models and architectures for the problem. In this work we propose an architecture-agnostic, two-stage, global-local frame-work, called GoLo, for the semantic segmentation, which can use arbitrary semantic segmentation models within its two stages. We focus on segmenting cell nuclei in histopathology image analysis, where accurate segmentation of cell nuclei boundaries is one of the key issues. The proposed framework consists of first stage with Global and second stage with Local learning approach. The first stage is proposed to process the image globally and provide the coarse nuclei segmentation map. In the second stage, to process the image locally, coarse segmentation map and input image is first converted into patches. These patches are then fed as input to the second stage to get the fine- grained segmentation map. Both stages are trained with a combination of dice and binary cross entropy loss. To show the effectiveness of our approach, we test 4 state-of-the-art segmentation architectures (ACC-UNet, UCTransnet, Swin-UNet, and Vanilla U-Net), on 4 different benchmark datasets (MoNuSeg, CPM-17, CoNSep, and TNBC). We evaluate performance of each technique before and after using our framework. We report an average improvement of 4.82 % in mIoU, and 4.52% mDSC score, across techniques, and datasets.",
+    arxivLink: "https://ieeexplore.ieee.org/document/10899523",
     demoDescription: "Interactive demo showing real-time image segmentation on webcam feed or uploaded images.",
     demoFeatures: ["Real-time webcam segmentation", "Upload custom images", "Adjustable confidence thresholds", "Multiple segmentation models"]
   },
   {
     id: "transformer-medical-imaging",
-    title: "Transformer-Based Architectures for Medical Image Analysis",
-    authors: "Zhang, E., Chen, S., Thompson, A.",
-    venue: "Medical Image Computing and Computer Assisted Intervention (MICCAI 2024)",
+    title: "DiffMamba: Leveraging Mamba for Effective Fusion of Noise and Conditional Features in Diffusion Models for Skin Lesion Segmentation",
+    authors: "Amit Shakya, Shruti S Phutke, Chetan Gupta, Rupesh Kumar, Lalit Sharma, Chetan Arora",
+    venue: "9th International Conference on Computer Vision & Image Processing (CVIP)",
     year: "2024",
-    abstract: "This work explores the application of transformer architectures to medical imaging tasks, demonstrating significant improvements in diagnostic accuracy. We introduce MedTransformer, a specialized vision transformer designed for medical image analysis that incorporates domain-specific attention mechanisms and multi-scale feature extraction. Our approach achieves state-of-the-art results on multiple medical imaging benchmarks including chest X-ray classification, MRI tumor detection, and CT scan analysis.",
+    abstract: "This work explores the application of transformer architectures to medical imaging tasks, demonstrating significant improvements in diagnostic accuracy.",
     arxivLink: "https://arxiv.org/abs/2024.00002",
     demoDescription: "Medical image analysis demo with pre-trained models for various diagnostic tasks.",
     demoFeatures: ["Chest X-ray analysis", "MRI tumor detection", "CT scan classification", "DICOM file support"]
@@ -95,7 +95,7 @@ const ResearchPaper = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
               >
-                View on arXiv
+                View Publication
                 <ExternalLink className="h-4 w-4" />
               </a>
             </Button>

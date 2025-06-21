@@ -3,33 +3,61 @@ import React from 'react';
 
 const teamMembers = [
   {
-    name: "Dr. Sarah Chen",
-    role: "Principal Investigator",
-    expertise: "Computer Vision, Deep Learning",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=400&h=400&fit=crop&crop=face",
-    description: "Leading research in advanced neural architectures and vision systems."
-  },
-  {
-    name: "Dr. Michael Rodriguez",
+    name: "Dr. Rupesh Kumar",
     role: "Senior Research Scientist",
-    expertise: "Machine Learning, NLP",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    description: "Specializing in transformer architectures and language understanding."
+    expertise: "Computer Vision, Deep Learning",
+    image: "/images/team/rupesh_kumar.jpg",
+    description: "Enter Description of Research "
   },
   {
-    name: "Dr. Emily Zhang",
-    role: "Research Scientist",
+    name: "Dr. Shruti Shantiling Phutke",
+    role: "Senior Research Scientist",
+    expertise: "Computer Vision, Deep Learning, Image Restoration, Biomedical Image Processing",
+    image: "/images/team/shruti.jpg",
+    description: "Enter Description of Research "
+  },
+  {
+    name: "Chetan Gupta",
+    role: "Data Scientist",
     expertise: "Image Segmentation, Medical AI",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    description: "Developing AI solutions for medical imaging and diagnostic applications."
+    image: "/images/team/chetan.jpg",
+    description: "Enter Description of Research "
   },
   {
-    name: "Alex Thompson",
-    role: "PhD Student",
-    expertise: "Reinforcement Learning, Robotics",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    description: "Research focus on autonomous systems and intelligent decision making."
-  }
+    name: "Amit Shakya",
+    role: "Associate Data Scientist",
+    expertise: "Medical Image Analysis, Computer Vision",
+    image: "/images/team/amit.jpg",
+    description: "Enter Description of Research."
+  },
+  {
+    name: "Prashant D. Kulkarni",
+    role: "Associate Data Scientist",
+    expertise: "3D Point Cloud, GIS, Medical Segmentation",
+    image: "",
+    description: "Research focus on 3D point cloud processing and GIS applications."
+  },
+  {
+    name: "Udaybhan Rathore",
+    role: "Associate Data Scientist",
+    expertise: "Computer Vision, NLP, Biometrics, Autonomous, Agriculture",
+    image: "/images/team/uday.jpg",
+    description: "Research focus on Plant Disease Detection and Agriculture Automation."
+  },
+  {
+    name: "Yasmin M. Tadavi",
+    role: "Associate Data Scientist",
+    expertise: "NLP, Knowledge Graphs, Audio Processing",
+    image: "",
+    description: "Research focus on NLP, SLMs, Knowledge Distillation and Audio Processing."
+  },
+  {
+    name: "Akanksha Yadav",
+    role: "Assistant Data Scientist",
+    expertise: "Medical Image Analysis, Computer Vision",
+    image: "/images/team/akanksha.jpg",
+    description: "Research focus on Medical Image Analysis and Segmentation."
+  },
 ];
 
 export const TeamSection = () => {

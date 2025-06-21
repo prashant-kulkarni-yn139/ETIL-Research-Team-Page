@@ -6,40 +6,40 @@ import { Book, ExternalLink } from 'lucide-react';
 const publications = [
   {
     id: "neural-networks-segmentation",
-    title: "Advanced Neural Networks for Real-Time Image Segmentation",
-    authors: "Chen, S., Zhang, E., Rodriguez, M.",
-    venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2024)",
+    title: "Two-Stage, Global-Local Approach for Cell Nuclei Segmentation in Histopathology Images",
+    authors: "Amit Shakya, Revat Saharan, Chetan Gupta, Rupesh Kumar, Lalit Sharma, Srivatsava Naidu, Subrahmanyam Murala, Chetan Arora",
+    venue: "IEEE 8th International Conference on Information and Communication Technology (CICT)",
     year: "2024",
-    abstract: "We present a novel approach to real-time image segmentation using lightweight neural networks that achieve state-of-the-art performance while maintaining computational efficiency.",
+    abstract: "The proposed framework consists of first stage with Global and second stage with Local learning approach.",
     link: "https://arxiv.org/abs/2024.00001"
   },
   {
     id: "transformer-medical-imaging",
-    title: "Transformer-Based Architectures for Medical Image Analysis",
-    authors: "Zhang, E., Chen, S., Thompson, A.",
-    venue: "Medical Image Computing and Computer Assisted Intervention (MICCAI 2024)",
+    title: "DiffMamba: Leveraging Mamba for Effective Fusion of Noise and Conditional Features in Diffusion Models for Skin Lesion Segmentation",
+    authors: "Amit Shakya, Shruti S Phutke, Chetan Gupta, Rupesh Kumar, Lalit Sharma, Chetan Arora",
+    venue: "9th International Conference on Computer Vision & Image Processing (CVIP)",
     year: "2024",
     abstract: "This work explores the application of transformer architectures to medical imaging tasks, demonstrating significant improvements in diagnostic accuracy.",
     link: "https://arxiv.org/abs/2024.00002"
   },
-  {
-    id: "federated-learning-healthcare",
-    title: "Federated Learning for Privacy-Preserving AI in Healthcare",
-    authors: "Rodriguez, M., Chen, S.",
-    venue: "Nature Machine Intelligence",
-    year: "2023",
-    abstract: "A comprehensive study on federated learning approaches that enable collaborative AI development while preserving patient privacy in healthcare applications.",
-    link: "https://www.nature.com/articles/s42256-023-00001-1"
-  },
-  {
-    id: "reinforcement-learning-navigation",
-    title: "Reinforcement Learning for Autonomous Navigation in Complex Environments",
-    authors: "Thompson, A., Rodriguez, M., Chen, S.",
-    venue: "International Conference on Machine Learning (ICML 2023)",
-    year: "2023",
-    abstract: "Novel reinforcement learning algorithms for navigation tasks in dynamic and complex environments with applications to autonomous robotics.",
-    link: "https://arxiv.org/abs/2023.00001"
-  }
+  // {
+  //   id: "federated-learning-healthcare",
+  //   title: "Federated Learning for Privacy-Preserving AI in Healthcare",
+  //   authors: "Rodriguez, M., Chen, S.",
+  //   venue: "Nature Machine Intelligence",
+  //   year: "2023",
+  //   abstract: "A comprehensive study on federated learning approaches that enable collaborative AI development while preserving patient privacy in healthcare applications.",
+  //   link: "https://www.nature.com/articles/s42256-023-00001-1"
+  // },
+  // {
+  //   id: "reinforcement-learning-navigation",
+  //   title: "Reinforcement Learning for Autonomous Navigation in Complex Environments",
+  //   authors: "Thompson, A., Rodriguez, M., Chen, S.",
+  //   venue: "International Conference on Machine Learning (ICML 2023)",
+  //   year: "2023",
+  //   abstract: "Novel reinforcement learning algorithms for navigation tasks in dynamic and complex environments with applications to autonomous robotics.",
+  //   link: "https://arxiv.org/abs/2023.00001"
+  // }
 ];
 
 export const PublicationsSection = () => {
@@ -49,7 +49,7 @@ export const PublicationsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Recent Publications</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our latest research contributions to the field of artificial intelligence
+            Our latest research papers published in top-tier conferences and journals.
           </p>
         </div>
         
