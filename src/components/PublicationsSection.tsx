@@ -1,9 +1,11 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Book, ExternalLink } from 'lucide-react';
 
 const publications = [
   {
+    id: "neural-networks-segmentation",
     title: "Advanced Neural Networks for Real-Time Image Segmentation",
     authors: "Chen, S., Zhang, E., Rodriguez, M.",
     venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2024)",
@@ -12,6 +14,7 @@ const publications = [
     link: "https://arxiv.org/abs/2024.00001"
   },
   {
+    id: "transformer-medical-imaging",
     title: "Transformer-Based Architectures for Medical Image Analysis",
     authors: "Zhang, E., Chen, S., Thompson, A.",
     venue: "Medical Image Computing and Computer Assisted Intervention (MICCAI 2024)",
@@ -20,6 +23,7 @@ const publications = [
     link: "https://arxiv.org/abs/2024.00002"
   },
   {
+    id: "federated-learning-healthcare",
     title: "Federated Learning for Privacy-Preserving AI in Healthcare",
     authors: "Rodriguez, M., Chen, S.",
     venue: "Nature Machine Intelligence",
@@ -28,6 +32,7 @@ const publications = [
     link: "https://www.nature.com/articles/s42256-023-00001-1"
   },
   {
+    id: "reinforcement-learning-navigation",
     title: "Reinforcement Learning for Autonomous Navigation in Complex Environments",
     authors: "Thompson, A., Rodriguez, M., Chen, S.",
     venue: "International Conference on Machine Learning (ICML 2023)",
@@ -60,15 +65,13 @@ export const PublicationsSection = () => {
                   <p className="text-gray-600 mb-2">{paper.authors}</p>
                   <p className="text-blue-600 font-medium mb-3">{paper.venue} ({paper.year})</p>
                   <p className="text-gray-700 mb-4">{paper.abstract}</p>
-                  <a 
-                    href={paper.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link 
+                    to={`/paper/${paper.id}`}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors"
                   >
                     Read Paper
                     <ExternalLink className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
