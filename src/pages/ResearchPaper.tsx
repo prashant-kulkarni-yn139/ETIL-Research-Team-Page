@@ -14,7 +14,7 @@ const papers = [
     year: "2024",
     abstract: "Effective management of high-resolution, and spatially wide contextual cues is fundamental to the accurate semantic segmentation. Traditional approaches like multi-resolution feature maps, and skip-connection are effective but require changes in the backbone architecture, restricting utilization of newer models and architectures for the problem. In this work we propose an architecture-agnostic, two-stage, global-local frame-work, called GoLo, for the semantic segmentation, which can use arbitrary semantic segmentation models within its two stages. We focus on segmenting cell nuclei in histopathology image analysis, where accurate segmentation of cell nuclei boundaries is one of the key issues. The proposed framework consists of first stage with Global and second stage with Local learning approach. The first stage is proposed to process the image globally and provide the coarse nuclei segmentation map. In the second stage, to process the image locally, coarse segmentation map and input image is first converted into patches. These patches are then fed as input to the second stage to get the fine- grained segmentation map. Both stages are trained with a combination of dice and binary cross entropy loss. To show the effectiveness of our approach, we test 4 state-of-the-art segmentation architectures (ACC-UNet, UCTransnet, Swin-UNet, and Vanilla U-Net), on 4 different benchmark datasets (MoNuSeg, CPM-17, CoNSep, and TNBC). We evaluate performance of each technique before and after using our framework. We report an average improvement of 4.82 % in mIoU, and 4.52% mDSC score, across techniques, and datasets.",
     arxivLink: "https://ieeexplore.ieee.org/document/10899523",
-    demoDescription: "Interactive demo showing real-time image segmentation on webcam feed or uploaded images.",
+    demoDescription: "Interactive demo showing real-time image segmentation on uploaded images.",
     demoFeatures: ["Real-time webcam segmentation", "Upload custom images", "Adjustable confidence thresholds", "Multiple segmentation models"]
   },
   {
@@ -123,7 +123,7 @@ const ResearchPaper = () => {
           <CardContent>
             <p className="text-gray-700 mb-4">{paper.demoDescription}</p>
             
-            <div className="bg-gray-100 rounded-lg p-6 mb-4">
+            {/* <div className="bg-gray-100 rounded-lg p-6 mb-4">
               <h4 className="font-semibold text-gray-900 mb-3">Demo Features:</h4>
               <ul className="space-y-2">
                 {paper.demoFeatures.map((feature, index) => (
@@ -133,7 +133,7 @@ const ResearchPaper = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
               <p className="text-blue-800 mb-4">Demo implementation coming soon!</p>
