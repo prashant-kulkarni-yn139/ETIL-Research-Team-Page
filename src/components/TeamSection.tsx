@@ -1,33 +1,39 @@
 
 import React from 'react';
+import rupesh from "@/assets/images/team/rupesh_kumar.jpg";
+import shruti from "@/assets/images/team/shruti.jpg";
+import chetan from "@/assets/images/team/chetan.jpg";
+import amit from "@/assets/images/team/amit.jpg";
+import akanksha from "@/assets/images/team/akanksha.jpg";
+import uday from "@/assets/images/team/uday.jpg";
 
 const teamMembers = [
   {
     name: "Dr. Rupesh Kumar",
     role: "Senior Research Scientist",
     expertise: "Computer Vision, Deep Learning",
-    image: "/images/team/rupesh_kumar.jpg",
+    image: rupesh,
     description: "Enter Description of Research "
   },
   {
     name: "Dr. Shruti Shantiling Phutke",
     role: "Senior Research Scientist",
     expertise: "Computer Vision, Deep Learning, Image Restoration, Biomedical Image Processing",
-    image: "/images/team/shruti.jpg",
+    image: shruti,
     description: "Enter Description of Research "
   },
   {
     name: "Chetan Gupta",
     role: "Data Scientist",
     expertise: "Image Segmentation, Medical AI",
-    image: "/images/team/chetan.jpg",
+    image: chetan,
     description: "Enter Description of Research "
   },
   {
     name: "Amit Shakya",
     role: "Associate Data Scientist",
     expertise: "Medical Image Analysis, Computer Vision",
-    image: "/images/team/amit.jpg",
+    image: amit,
     description: "Enter Description of Research."
   },
   {
@@ -41,7 +47,7 @@ const teamMembers = [
     name: "Udaybhan Rathore",
     role: "Associate Data Scientist",
     expertise: "Computer Vision, NLP, Biometrics, Autonomous, Agriculture",
-    image: "/images/team/uday.jpg",
+    image: uday,
     description: "Research focus on Plant Disease Detection and Agriculture Automation."
   },
   {
@@ -55,7 +61,7 @@ const teamMembers = [
     name: "Akanksha Yadav",
     role: "Assistant Data Scientist",
     expertise: "Medical Image Analysis, Computer Vision",
-    image: "/images/team/akanksha.jpg",
+    image: akanksha,
     description: "Research focus on Medical Image Analysis and Segmentation."
   },
 ];
