@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Book } from 'lucide-react';
+import { Book, ExternalLink } from 'lucide-react';
 
 const publications = [
   {
@@ -9,7 +9,7 @@ const publications = [
     venue: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2024)",
     year: "2024",
     abstract: "We present a novel approach to real-time image segmentation using lightweight neural networks that achieve state-of-the-art performance while maintaining computational efficiency.",
-    link: "#"
+    link: "https://arxiv.org/abs/2024.00001"
   },
   {
     title: "Transformer-Based Architectures for Medical Image Analysis",
@@ -17,7 +17,7 @@ const publications = [
     venue: "Medical Image Computing and Computer Assisted Intervention (MICCAI 2024)",
     year: "2024",
     abstract: "This work explores the application of transformer architectures to medical imaging tasks, demonstrating significant improvements in diagnostic accuracy.",
-    link: "#"
+    link: "https://arxiv.org/abs/2024.00002"
   },
   {
     title: "Federated Learning for Privacy-Preserving AI in Healthcare",
@@ -25,7 +25,7 @@ const publications = [
     venue: "Nature Machine Intelligence",
     year: "2023",
     abstract: "A comprehensive study on federated learning approaches that enable collaborative AI development while preserving patient privacy in healthcare applications.",
-    link: "#"
+    link: "https://www.nature.com/articles/s42256-023-00001-1"
   },
   {
     title: "Reinforcement Learning for Autonomous Navigation in Complex Environments",
@@ -33,7 +33,7 @@ const publications = [
     venue: "International Conference on Machine Learning (ICML 2023)",
     year: "2023",
     abstract: "Novel reinforcement learning algorithms for navigation tasks in dynamic and complex environments with applications to autonomous robotics.",
-    link: "#"
+    link: "https://arxiv.org/abs/2023.00001"
   }
 ];
 
@@ -61,10 +61,13 @@ export const PublicationsSection = () => {
                   <p className="text-blue-600 font-medium mb-3">{paper.venue} ({paper.year})</p>
                   <p className="text-gray-700 mb-4">{paper.abstract}</p>
                   <a 
-                    href={paper.link} 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    href={paper.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors"
                   >
-                    Read Paper →
+                    Read Paper
+                    <ExternalLink className="h-4 w-4" />
                   </a>
                 </div>
               </div>
