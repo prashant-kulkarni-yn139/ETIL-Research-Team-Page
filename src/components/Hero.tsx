@@ -1,19 +1,15 @@
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const Hero = () => {
-  const handleContactClick = () => {
-    // For now, we'll show an alert with contact information
-    // This can be updated later to navigate to a contact page or form
-    alert('Contact us at: research@etil.com or call +1-555-0123');
-  };
+  const navigate = useNavigate();
 
   const handleResearchClick = () => {
-    // Scroll to the publications section
-    const publicationsSection = document.querySelector('[data-section="publications"]');
-    if (publicationsSection) {
-      publicationsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/#research'); // or change to /#publications or a real section ID
+  };
+
+  const handleContactClick = () => {
+    navigate('/#contact'); // or a real section like /#team or /contact
   };
 
   return (
@@ -26,8 +22,7 @@ export const Hero = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Our team is dedicated to do research along the Yamaha Vision.
             Area of research: 
-            Medical Imaging, Precision Agriculture,  Techniques of Autonomous Driving, 3D Point Cloud, Language Model, EEG
-
+            Medical Imaging, Precision Agriculture, Techniques of Autonomous Driving, 3D Point Cloud, Language Model, EEG
           </p>
           <div className="flex justify-center space-x-4">
             <button 
