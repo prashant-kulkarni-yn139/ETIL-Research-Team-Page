@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -5,11 +6,14 @@ export const Hero = () => {
   const navigate = useNavigate();
 
   const handleResearchClick = () => {
-    navigate('/#research'); // or change to /#publications or a real section ID
+    const publicationsSection = document.querySelector('[data-section="publications"]');
+    if (publicationsSection) {
+      publicationsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleContactClick = () => {
-    navigate('/#contact'); // or a real section like /#team or /contact
+    navigate('/contact');
   };
 
   return (
