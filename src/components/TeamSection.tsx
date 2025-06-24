@@ -6,6 +6,7 @@ import chetan from "@/assets/images/team/chetan.jpg";
 import amit from "@/assets/images/team/amit.jpg";
 import akanksha from "@/assets/images/team/akanksha.jpg";
 import uday from "@/assets/images/team/uday.jpg";
+import yasmin from "@/assets/images/team/yasmin.jpg";
 
 const teamMembers = [
   {
@@ -54,7 +55,7 @@ const teamMembers = [
     name: "Yasmin M. Tadavi",
     role: "Associate Data Scientist",
     expertise: "NLP, Knowledge Graphs, Audio Processing",
-    image: "",
+    image: yasmin,
     description: "Research focus on NLP, SLMs, Knowledge Distillation and Audio Processing."
   },
   {
