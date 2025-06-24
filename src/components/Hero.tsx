@@ -2,6 +2,20 @@
 import React from 'react';
 
 export const Hero = () => {
+  const handleContactClick = () => {
+    // For now, we'll show an alert with contact information
+    // This can be updated later to navigate to a contact page or form
+    alert('Contact us at: research@etil.com or call +1-555-0123');
+  };
+
+  const handleResearchClick = () => {
+    // Scroll to the publications section
+    const publicationsSection = document.querySelector('[data-section="publications"]');
+    if (publicationsSection) {
+      publicationsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,10 +30,16 @@ export const Hero = () => {
 
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            <button 
+              onClick={handleResearchClick}
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
               Our Research
             </button>
-            <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <button 
+              onClick={handleContactClick}
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
               Contact Us
             </button>
           </div>

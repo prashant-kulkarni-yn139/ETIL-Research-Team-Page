@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Play } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+// import React, { useState, useRef } from 'react';
+
 
 const papers = [
   {
@@ -52,7 +54,37 @@ const papers = [
   }
 ];
 
+
+
 const ResearchPaper = () => {
+
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [resultImage, setResultImage] = useState<string | null>(null);
+
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setSelectedFile(file);
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const res = await fetch("http://localhost:8000/predict/", {
+        method: "POST",
+        body: formData,
+      });
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      setResultImage(url);
+    } catch (err) {
+      console.error("Inference failed", err);
+    }
+  };
   const { id } = useParams<{ id: string }>();
   const paper = papers.find(p => p.id === id);
 
@@ -111,7 +143,6 @@ const ResearchPaper = () => {
             <p className="text-gray-700 leading-relaxed">{paper.abstract}</p>
           </CardContent>
         </Card>
-
         {/* Demo Section */}
         <Card>
           <CardHeader>
@@ -122,27 +153,30 @@ const ResearchPaper = () => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700 mb-4">{paper.demoDescription}</p>
-            
-            {/* <div className="bg-gray-100 rounded-lg p-6 mb-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Demo Features:</h4>
-              <ul className="space-y-2">
-                {paper.demoFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-2 text-gray-700">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div> */}
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
-              <p className="text-blue-800 mb-4">Demo implementation coming soon!</p>
-              <p className="text-sm text-blue-600">
-                Interactive demonstrations will be available in the next update.
-              </p>
+            <div className="flex flex-col items-center gap-4">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                ref={fileInputRef}
+                className="block text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700 transition"
+              />
+
+              {resultImage && (
+                <div className="w-full mt-4 text-center">
+                  <p className="mb-2 text-sm text-gray-700 font-medium">Prediction Result</p>
+                  <img
+                    src={resultImage}
+                    alt="Prediction Result"
+                    className="rounded-lg border shadow max-w-full h-auto mx-auto"
+                  />
+                </div>
+              )}
             </div>
           </CardContent>
         </Card>
+
       </div>
     </div>
   );
