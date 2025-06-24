@@ -32,7 +32,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">research@etil.com</p>
+                    <p className="text-gray-600">ymsli@yamaha-motor-india.com</p>
                   </div>
                 </div>
                 
@@ -42,7 +42,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+1-555-0123</p>
+                    <p className="text-gray-600">PH NO</p>
                   </div>
                 </div>
 
@@ -51,8 +51,11 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
+
+                     
                     <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">ETIL Research Lab<br />AI Research Division</p>
+                    <p className="text-gray-600">ETIL Research Lab<br />Fifth & Sixth Floor, L&T,<br/>
+                    12/4, Mathura Rd, near Sarai Khawaja Road,<br/>Sector 27D, Faridabad, Haryana 121003</p>
                   </div>
                 </div>
               </div>
