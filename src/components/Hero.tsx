@@ -24,8 +24,8 @@ export const Hero = () => {
             ETIL Research Lab
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Our team is dedicated to do research along the Yamaha Vision.
-            Area of research: 
+            Our team is dedicated to do research along the Yamaha Vision.<br />
+            Area of research: <br />
             Medical Imaging, Precision Agriculture, Techniques of Autonomous Driving, 3D Point Cloud, Language Model, EEG
           </p>
           <div className="flex justify-center space-x-4">
