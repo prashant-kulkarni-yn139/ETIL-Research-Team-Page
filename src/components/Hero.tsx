@@ -1,11 +1,12 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   const handleContactClick = () => {
-    // For now, we'll show an alert with contact information
-    // This can be updated later to navigate to a contact page or form
-    alert('Contact us at: research@etil.com or call +1-555-0123');
+    navigate('/contact');
   };
 
   const handleResearchClick = () => {
