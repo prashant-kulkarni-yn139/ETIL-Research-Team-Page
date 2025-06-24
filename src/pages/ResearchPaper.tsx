@@ -143,6 +143,7 @@ const ResearchPaper = () => {
             <p className="text-gray-700 leading-relaxed">{paper.abstract}</p>
           </CardContent>
         </Card>
+
         {/* Demo Section */}
         <Card>
           <CardHeader>
@@ -163,8 +164,18 @@ const ResearchPaper = () => {
                 className="block text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700 transition"
               />
 
-              {resultImage && (
-                <div className="w-full mt-4 text-center">
+
+            {selectedFile && resultImage && (
+              <div className="w-full mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="text-center">
+                  <p className="mb-2 text-sm text-gray-700 font-medium">Original Image</p>
+                  <img
+                    src={URL.createObjectURL(selectedFile)}
+                    alt="Uploaded"
+                    className="rounded-lg border shadow max-w-full h-auto mx-auto"
+                  />
+                </div>
+                <div className="text-center">
                   <p className="mb-2 text-sm text-gray-700 font-medium">Prediction Result</p>
                   <img
                     src={resultImage}
@@ -172,7 +183,11 @@ const ResearchPaper = () => {
                     className="rounded-lg border shadow max-w-full h-auto mx-auto"
                   />
                 </div>
-              )}
+              </div>
+            )}
+
+
+
             </div>
           </CardContent>
         </Card>
